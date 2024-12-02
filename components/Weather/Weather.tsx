@@ -20,7 +20,7 @@ const Weather = ({ location, current }: WeatherProp) => {
           </div>
           <div>
             <h2 className="text-6xl md:text-8xl font-bold">
-              {current.temp_c}&deg;
+              {current.temp_c}&deg;C
             </h2>
             <p className="font-extrabold visible md:hidden  text-md mt-4">
               {current.condition.text}
