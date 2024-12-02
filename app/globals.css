@@ -4,4 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+.grid-container {
+  @apply max-w-6xl mx-auto grid grid-cols-4 md:grid-cols-6 py-10 px-5 gap-12 md:py-12 md:px-0;
+}
