@@ -13,14 +13,14 @@ interface WeatherDetailsProps {
 }
 const WeatherDetails = ({ current }: WeatherDetailsProps) => {
   return (
-    <section className="relative col-span-4 md:col-span-3 h-56 rounded-lg bg-milkywhite/[.50] text-primary">
+    <section className="relative col-span-4 md:col-span-3 h-auto  md:h-60 rounded-lg bg-milkywhite/[.50] text-primary">
       <h2 className="absolute top-[-30px] left-4 font-bold tracking-wider">
         Weather Details
       </h2>
-      <div className="p-6 grid grid-cols-3 gap-5 font-black text-xs md:text-[16px]">
+      <div className="p-6 grid grid-cols-2 md:grid-cols-3 gap-6 font-black text-sm md:text-[16px]">
         <div className="h-20 bg-blue-300/[.30] flex flex-col items-center justify-center rounded-md gap-3">
           <span>Feels Like</span>
-          <span>{`${current.feelslike_c}`}</span>
+          <span>{`${current?.feelslike_c}`}</span>
         </div>
         <div className="h-20 bg-blue-300/[.30] flex flex-col items-center justify-center rounded-md gap-3">
           <span>{current.wind_dir} Wind</span>
