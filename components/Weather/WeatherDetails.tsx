@@ -14,7 +14,7 @@ interface WeatherDetailsProps {
 const WeatherDetails = ({ current }: WeatherDetailsProps) => {
   return (
     <section className="relative col-span-4 md:col-span-3 h-auto  md:h-60 rounded-lg bg-milkywhite/[.50] text-primary">
-      <h2 className="absolute top-[-30px] left-4 font-bold tracking-wider">
+      <h2 className="absolute top-[-30px] left-4 font-bold tracking-wider bg-primary px-4 rounded-full text-white">
         Weather Details
       </h2>
       <div className="p-6 grid grid-cols-2 md:grid-cols-3 gap-6 font-black text-sm md:text-[16px]">

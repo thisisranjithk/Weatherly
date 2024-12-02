@@ -17,7 +17,7 @@ export default async function Home() {
   }
   // console.log(response.data.forecast);
   return (
-    <main className="w-screen h-auto md:h-screen bg-hero bg-center bg-cover bg-no-repeat">
+    <main className="w-screen h-auto md:h-screen bg-hero3 bg-center bg-cover bg-no-repeat">
       <Navbar />
       <section className="grid-container">
         <Weather

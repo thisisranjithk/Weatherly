@@ -10,9 +10,9 @@ export default {
     extend: {
       backgroundImage: {
         hero: "url('/images/hero.png')",
-        hero1: "url('/images/hero1.png')",
-        hero2: "url('/images/hero2.png')",
-        hero3: "url('/images/hero3.png')",
+        hero1: "url('/images/hero1.jpg')",
+        hero2: "url('/images/hero2.jpg')",
+        hero3: "url('/images/hero3.jpg')",
       },
       colors: {
         milkywhite: "#fffafe",
