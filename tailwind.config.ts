@@ -8,9 +8,17 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/images/hero.png')",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        milkywhite: "#fffafe",
+        primary: "#009FBD",
+      },
+
+      fontFamily: {
+        sans: ["Doto", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
