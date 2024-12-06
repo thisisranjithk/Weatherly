@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weatherly
+
+Weatherly is a modern weather application built with Next.js that allows users to find current weather data and a 5-day weather forecast for any location worldwide. This app harnesses the capabilities of the [WeatherAPI](https://www.weatherapi.com/) to provide accurate and reliable weather information, all deployed seamlessly on Vercel.
+
+## Features
+
+- **Current Weather**: Get real-time weather information by entering a location name.
+- **5-Day Forecast**: View the weather forecast for the next five days.
+- **Dynamic Pages**: Leverage Next.js for server-side rendering and optimal performance.
+- **User-Friendly Interface**: An intuitive interface for easy navigation and data access.
+
+## Technologies Used
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **API**: [WeatherAPI](https://www.weatherapi.com/)
+- **Deployment**: [Vercel](https://vercel.com/)
+- **Languages**: JavaScript, HTML, CSS
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js installed on your machine
+- An active internet connection
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/weatherly.git
