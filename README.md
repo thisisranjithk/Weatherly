@@ -29,4 +29,29 @@ To get a local copy up and running, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/weatherly.git
+   git clone https://github.com/thisisranjithk/Weatherly.git
+
+2.Navigate to the project directory:
+   ```bash
+   cd weatherly
+3.Install the dependencies:
+   ```bash
+   npm install
+4.Create a .env file in the root of the project and add your WeatherAPI key:
+   ```.env
+   API_KEY=your_api_key_here
+5.Start the development server:
+   ```bash
+   npm run dev
+6.Open your browser and navigate to http://localhost:3000 to view the application.
+
+### API Key
+
+To use the WeatherAPI, you'll need to sign up and obtain an API key. Follow these steps:
+
+1. Go to WeatherAPI and create an account.
+2. After creating an account, log in and navigate to the API section to get your unique API key.
+3. Add your API key to the .env file you created in the previous section.
+
+## Contributing
+Contributions are welcome! If you have suggestions or improvements, please fork the repo and submit a pull request.
