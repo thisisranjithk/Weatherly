@@ -3,8 +3,6 @@ interface ForecastItemProps {
 }
 
 const ForecastItem = ({ data }: ForecastItemProps) => {
-  console.log(data);
-
   return (
     <div className="relative h-20 bg-blue-300/[.30] flex flex-col rounded-md mt-2">
       <span className="absolute top-[-18px] font-poppins font-semibold tracking-wider text-[11px] left-1">{`${formatDay(

@@ -6,7 +6,7 @@ interface WeatherProp {
   current: any;
 }
 
-const Weather = ({ location, current }: WeatherProp) => {
+const WeatherMain = ({ location, current }: WeatherProp) => {
   return (
     <section className="col-span-4 md:col-span-6 h-64 p-8 rounded-lg bg-milkywhite/[.50] text-primary">
       <div className="flex justify-between">
@@ -52,4 +52,4 @@ const Weather = ({ location, current }: WeatherProp) => {
   );
 };
 
-export default Weather;
+export default WeatherMain;

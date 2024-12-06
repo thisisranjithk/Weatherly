@@ -18,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body >{children}</body>
+      <body>
+        <main className="w-screen h-auto md:h-screen bg-hero3 bg-center bg-cover bg-no-repeat">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
