@@ -19,7 +19,6 @@ const Weather = async ({
       `forecast.json?key=${process.env.API_KEY}&q=${query}&days=5`
     );
   } catch (error) {
-    console.error("Error fetching weather data:", error);
     return (
       <section className="w-screen h-screen flex items-center flex-col pt-32 text-center font-bold">
         <p>Error loading weather data. Please try again later.</p>

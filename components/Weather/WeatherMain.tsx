@@ -8,7 +8,7 @@ interface WeatherProp {
 
 const WeatherMain = ({ location, current }: WeatherProp) => {
   return (
-    <section className="col-span-4 md:col-span-6 h-64 p-8 rounded-lg bg-milkywhite/[.50] text-primary">
+    <section className="col-span-4 md:col-span-6 h-64 p-8 rounded-lg bg-milkywhite/[.50] text-primary mx-4 lg:mx-0">
       <div className="flex justify-between">
         <div>
           <div className="font-black mb-9">
