@@ -1,5 +1,7 @@
+import { forecastday } from "@/lib/types";
+// import Image from "next/image";
 interface ForecastItemProps {
-  data: any;
+  data: forecastday;
 }
 
 const ForecastItem = ({ data }: ForecastItemProps) => {

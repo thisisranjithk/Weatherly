@@ -12,7 +12,7 @@ const WeatherForecast = ({ forecastData }: WeatherForecastProps) => {
         5 days Weather forecast
       </h2>
       <div className="p-6 grid grid-cols-2 md:grid-cols-3 gap-5 font-black text-xs md:text-[16px]">
-        {forecastData?.map((data: any) => (
+        {forecastData?.map((data: forecastday) => (
           <ForecastItem key={data.date_epoch} data={data} />
         ))}
       </div>
