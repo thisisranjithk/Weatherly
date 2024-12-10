@@ -1,9 +1,10 @@
 "use client";
 import { RiRefreshLine } from "react-icons/ri";
+import { Location, Current } from "@/lib/types";
 
 interface WeatherProp {
-  location: any;
-  current: any;
+  location: Location;
+  current: Current;
 }
 
 const WeatherMain = ({ location, current }: WeatherProp) => {

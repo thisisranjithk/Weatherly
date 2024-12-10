@@ -1,11 +1,11 @@
 import ForecastItem from "./ForecastItem";
+import { forecastday } from "@/lib/types";
 
 interface WeatherForecastProps {
-  forecastData: any;
+  forecastData: forecastday[];
 }
 
 const WeatherForecast = ({ forecastData }: WeatherForecastProps) => {
-  // console.log(forecastData);
   return (
     <section className="relative mx-4 lg:mx-0 col-span-4 md:col-span-3 h-auto md:h-60 rounded-lg bg-milkywhite/[.50] font-bold text-primary">
       <h2 className="absolute top-[-30px] left-4 font-bold tracking-wider bg-primary px-4 rounded-full text-white">

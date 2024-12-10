@@ -1,15 +1,7 @@
-interface currentObj {
-  feelslike_c: Number;
-  wind_kph: Number;
-  humidity: Number;
-  uv: Number;
-  vis_miles: Number;
-  pressure_mb: Number;
-  wind_dir: String;
-}
+import { Current } from "@/lib/types";
 
 interface WeatherDetailsProps {
-  current: currentObj;
+  current: Current;
 }
 const WeatherDetails = ({ current }: WeatherDetailsProps) => {
   return (
