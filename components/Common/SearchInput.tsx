@@ -1,6 +1,6 @@
 "use client";
 import { FaCloudversify } from "react-icons/fa6";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { redirect } from "next/navigation";
 import { useState } from "react";
 

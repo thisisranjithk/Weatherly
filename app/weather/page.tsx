@@ -19,7 +19,8 @@ const Weather = async ({
     response = await axiosInstance.get(
       `forecast.json?key=${process.env.API_KEY}&q=${query?.q}&days=5`
     );
-  } catch (error) {
+  } catch (error: unknown) {
+    console.log(error);
     return (
       <section className="w-screen h-screen flex items-center flex-col pt-32 text-center font-bold">
         <p>Error loading weather data. Please try again later.</p>
