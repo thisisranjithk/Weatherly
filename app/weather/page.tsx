@@ -12,11 +12,12 @@ const Weather = async ({
 }: {
   searchParams?: { [key: string]: string | string[] | undefined };
 }) => {
-  const query = searchParams?.q || "pernambut";
+  const query = await searchParams;
+
   let response;
   try {
     response = await axiosInstance.get(
-      `forecast.json?key=${process.env.API_KEY}&q=${query}&days=5`
+      `forecast.json?key=${process.env.API_KEY}&q=${query?.q}&days=5`
     );
   } catch (error) {
     return (
