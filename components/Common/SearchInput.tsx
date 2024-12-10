@@ -19,6 +19,12 @@ const SearchInput = ({
   const searchparams = useSearchParams();
   const params = new URLSearchParams(searchparams);
 
+  const handleKeyPress = (key: string) => {
+    if (key === "Enter") {
+      handleClick();
+    }
+  };
+
   const handleClick = () => {
     if (queryTerm) {
       params.set("q", queryTerm);
@@ -35,6 +41,7 @@ const SearchInput = ({
         value={queryTerm}
         placeholder={placeholder}
         onChange={(e) => setQueryTerm(e.target.value)}
+        onKeyUp={(e) => handleKeyPress(e.key)}
       />
 
       <FaCloudversify
