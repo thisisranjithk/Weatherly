@@ -7,11 +7,7 @@ import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
-const Weather = async ({
-  searchParams,
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) => {
+const Weather = async ({ searchParams }: { searchParams?: any }) => {
   const query = await searchParams;
 
   let response;
