@@ -1,41 +1,22 @@
 export const dynamic = "force-dynamic";
 
 import Navbar from "@/components/Layout/Navbar";
-import axiosInstance from "@/components/services/data";
 import WeatherDetails from "@/components/Weather/WeatherDetails";
 import WeatherForecast from "@/components/Weather/WeatherForecast";
 import WeatherMain from "@/components/Weather/WeatherMain";
+import { fetchWeatherData } from "@/lib/data";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const Weather = async ({ searchParams }: { searchParams?: any }) => {
-  const query = await searchParams;
+  const searchQuery = await searchParams;
+  const query = searchQuery?.q;
+  const response = await fetchWeatherData(query);
 
-  let response;
-  try {
-    response = await axiosInstance.get(
-      `forecast.json?key=${process.env.API_KEY}&q=${query?.q}&days=5`
-    );
-  } catch (error: any) {
-    const errorMessage =
-      error.response?.data?.error?.message || "An unknown error occurred";
-    console.error(errorMessage);
+  if (!response) {
     return (
       <section className="w-screen h-screen flex items-center flex-col pt-32 text-center font-bold">
-        <p>{errorMessage}. Please try again.</p>
-        <Link
-          href="/"
-          className="bg-primary text-white py-2 px-6 rounded-full mt-4"
-        >
-          Go Home
-        </Link>
-      </section>
-    );
-  }
-
-  if (!query) {
-    return (
-      <section className="w-screen h-screen flex items-center flex-col pt-32 text-center font-bold">
-        <p>Error loading weather data. Please try again later.</p>
+        <p>No matching location found. Please try again.</p>
         <Link
           href="/"
           className="bg-primary text-white py-2 px-6 rounded-full mt-4"
@@ -50,10 +31,12 @@ const Weather = async ({ searchParams }: { searchParams?: any }) => {
     <>
       <Navbar />
       <section className="grid-container">
-        <WeatherMain
-          location={response.data.location}
-          current={response.data.current}
-        />
+        <Suspense fallback={<p>Loading...</p>}>
+          <WeatherMain
+            location={response.data.location}
+            current={response.data.current}
+          />
+        </Suspense>
         <WeatherDetails current={response.data.current} />
         <WeatherForecast forecastData={response.data.forecast.forecastday} />
       </section>

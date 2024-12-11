@@ -1,4 +1,3 @@
-"use client";
 import { RiRefreshLine } from "react-icons/ri";
 import { Location, Current } from "@/lib/types";
 import Image from "next/image";

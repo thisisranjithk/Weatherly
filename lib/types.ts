@@ -46,3 +46,8 @@ export interface forecastday {
   daily_chance_of_rain: number;
   astro?: any;
 }
+
+export interface Coordinates {
+  latitude: number;
+  longitude: number;
+}
