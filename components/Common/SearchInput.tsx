@@ -2,6 +2,7 @@
 import { FaCloudversify } from "react-icons/fa6";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 interface SearchInputProps {
   placeholder: string;
@@ -28,9 +29,9 @@ const SearchInput = ({
   const handleClick = () => {
     if (queryTerm.trim()) {
       params.set("q", queryTerm.trim());
-      router.push(`/weather?q=${encodeURIComponent(queryTerm)}`);
+      router.push(`/weather?q=${encodeURIComponent(queryTerm.trim())}`);
     } else {
-      alert("Enter the valid location");
+      toast.error("Enter the valid location");
     }
 
     setQueryTerm("");
