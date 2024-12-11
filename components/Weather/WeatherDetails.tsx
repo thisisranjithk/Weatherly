@@ -5,7 +5,7 @@ interface WeatherDetailsProps {
 }
 const WeatherDetails = ({ current }: WeatherDetailsProps) => {
   return (
-    <section className="relative mx-4 lg:mx-0 col-span-4 md:col-span-3 h-auto  md:h-60 rounded-lg bg-milkywhite/[.50] text-primary">
+    <section className="relative mx-4 lg:mx-0 col-span-4 md:col-span-3 h-auto  md:h-60 rounded-lg bg-milkywhite/[.70] text-primary">
       <h2 className="absolute top-[-30px] left-4 font-bold tracking-wider bg-primary px-4 rounded-full text-white">
         Weather Details
       </h2>
