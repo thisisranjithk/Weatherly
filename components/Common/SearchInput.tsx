@@ -1,7 +1,6 @@
 "use client";
 import { FaCloudversify } from "react-icons/fa6";
-import { useSearchParams } from "next/navigation";
-import { redirect } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface SearchInputProps {
@@ -18,6 +17,7 @@ const SearchInput = ({
   const [queryTerm, setQueryTerm] = useState<string>("");
   const searchparams = useSearchParams();
   const params = new URLSearchParams(searchparams);
+  const router = useRouter();
 
   const handleKeyPress = (key: string) => {
     if (key === "Enter") {
@@ -26,11 +26,14 @@ const SearchInput = ({
   };
 
   const handleClick = () => {
-    if (queryTerm) {
-      params.set("q", queryTerm);
+    if (queryTerm.trim()) {
+      params.set("q", queryTerm.trim());
+      router.push(`/weather?q=${encodeURIComponent(queryTerm)}`);
+    } else {
+      alert("Enter the valid location");
     }
+
     setQueryTerm("");
-    redirect(`/weather?${params.toString()}`);
   };
 
   return (
