@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   authors: METADATA.authors,
   creator: METADATA.creator,
   publisher: METADATA.publisher,
+  icons: METADATA.icons,
+  manifest: "/favicon/site.webmanifest",
 };
 
 export default function RootLayout({
