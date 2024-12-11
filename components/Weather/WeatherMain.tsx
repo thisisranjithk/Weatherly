@@ -1,7 +1,7 @@
 "use client";
 import { RiRefreshLine } from "react-icons/ri";
 import { Location, Current } from "@/lib/types";
-
+import Image from "next/image";
 interface WeatherProp {
   location: Location;
   current: Current;
@@ -41,10 +41,12 @@ const WeatherMain = ({ location, current }: WeatherProp) => {
             <p className="font-extrabold hidden md:block md:text-2xl">
               {current.condition.text}
             </p>
-            <img
-              src={current.condition.icon}
+            <Image
+              src={`https:${current.condition.icon}`}
               alt="weather-icon"
               className="w-24 h-24 object-fit"
+              height={95}
+              width={95}
             />
           </div>
         </div>
